@@ -1,13 +1,13 @@
-var React = require('react');
-var PropTypes = require('prop-types');
-var queryString = require('query-string');
-var api = require('../utils/api');
-var Link = require('react-router-dom').Link;
-var PlayerPreview = require('./PlayerPreview');
-var Loading = require('./Loading');
+const React = require('react');
+const PropTypes = require('prop-types');
+const queryString = require('query-string');
+const api = require('../utils/api');
+const Link = require('react-router-dom').Link;
+const PlayerPreview = require('./PlayerPreview');
+const Loading = require('./Loading');
 
 function Profile (props) {
-  var info = props.info;
+  const info = props.info;
 
   return (
     <PlayerPreview username={info.login} avatar={info.avatar_url}>
@@ -55,7 +55,7 @@ class Results extends React.Component {
     }
   }
   componentDidMount() {
-    var players = queryString.parse(this.props.location.search);
+    const players = queryString.parse(this.props.location.search);
 
     api.battle([
       players.playerOneName,
@@ -81,10 +81,10 @@ class Results extends React.Component {
     }.bind(this));
   }
   render() {
-    var error = this.state.error;
-    var winner = this.state.winner;
-    var loser = this.state.loser;
-    var loading = this.state.loading;
+    const error = this.state.error;
+    const winner = this.state.winner;
+    const loser = this.state.loser;
+    const loading = this.state.loading;
 
     if (loading === true) {
       return <Loading />

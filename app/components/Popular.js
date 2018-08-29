@@ -1,10 +1,10 @@
-var React = require('react');
-var PropTypes = require('prop-types');
-var api = require('../utils/api');
-var Loading = require('./Loading');
+const React = require('react');
+const PropTypes = require('prop-types');
+const api = require('../utils/api');
+const Loading = require('./Loading');
 
 function SelectLanguage (props) {
-  var languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
+  const languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
   return (
     <ul className='languages'>
       {languages.map(function (lang) {
